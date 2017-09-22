@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b2500abe25338bd04ae8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "506c82d98af44c818061"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -736,9 +736,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('load', function() {
-  console.log('Holberton School');
-  // $("h1").html("Holberton School");
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()("body").after("<h1>Holberton School</h1>");
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()("body").after( __WEBPACK_IMPORTED_MODULE_0_jquery___default()("<h1 id=\'header1\'>HolbertonSchool</h1>").hide());
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()("body").after( __WEBPACK_IMPORTED_MODULE_0_jquery___default()("<h1 id=\'header2\'>HBTN</h1>").hide());
+
+  function show_second_h1() {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()("#header1").hide();
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()("#header2").show();
+    setTimeout(show_first_h1,2000);
+  }
+
+  function show_first_h1() {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()("#header1").show();
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()("#header2").hide();
+    setTimeout(show_second_h1,2000);
+  }
+  setTimeout(show_second_h1,2000);
 });
 
 

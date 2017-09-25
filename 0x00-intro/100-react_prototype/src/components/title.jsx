@@ -9,6 +9,10 @@ export default class Title extends React.Component {
   }
 }
 
+Title.defaultProps = {
+  name: "Holberton School"
+}
+
 Title.propTypes = {
   name: PropTypes.string
 };

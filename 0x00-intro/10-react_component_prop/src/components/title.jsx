@@ -14,5 +14,5 @@ Title.defaultProps = {
 }
 
 Title.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string.isRequired
 };

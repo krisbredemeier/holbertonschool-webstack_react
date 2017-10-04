@@ -1,9 +1,10 @@
 import React from 'react';
+import Title from 'title';
 
 export default class App extends React.Component {
   render() {
     return (
-      <h1>Welcome to Holberton School</h1>
+      <Title name="Welcome to Holberton School" />
     );
   }
 }

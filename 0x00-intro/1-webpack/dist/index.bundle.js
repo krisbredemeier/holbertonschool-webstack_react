@@ -65,9 +65,20 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-console.log('Holberton School');
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+throw new Error("Cannot find module \"jquery\"");
+// console.log('Holberton School');
+
+
+
+__WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('load', function() {
+  console.log('Holberton School');
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()("h1").html("Holberton School");
+
+});
 
 
 /***/ })

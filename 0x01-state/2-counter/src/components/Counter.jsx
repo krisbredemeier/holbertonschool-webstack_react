@@ -5,14 +5,14 @@ export default class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state ={
-      value: props.initValue
+      value: 89
     };
   }
 
   render() {
     return (
       <div>
-        {this.props.initValue}
+        {this.props.value}
       </div>
     );
   }

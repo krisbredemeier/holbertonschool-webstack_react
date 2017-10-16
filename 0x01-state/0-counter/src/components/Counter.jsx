@@ -11,9 +11,9 @@ export default class Counter extends React.Component {
   }
 }
 
-Counter.defaultProps = {
-  value: 0
-};
+// Counter.defaultProps = {
+//   value: 0
+// };
 
 Counter.propTypes = {
   value: PropTypes.number.isRequired

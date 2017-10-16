@@ -8,11 +8,17 @@ export default class Counter extends React.Component {
       value: props.initValue
     };
   }
+  onClick(){
+    this.setState({
+      value: 100
+    })
+  }
 
   render() {
     return (
       <div>
-        {this.props.initValue}
+        {this.state.value}
+        <button onClick={this.onClick.bind(this)}>New value</button>
       </div>
     );
   }

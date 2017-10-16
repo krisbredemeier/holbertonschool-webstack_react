@@ -5,7 +5,8 @@ export default class App extends React.Component {
   render() {
     return (
      <div>
-        <Counter initValue={9} />
+        <Counter value={98} />
+        <Counter />
       </div>);
   }
 }

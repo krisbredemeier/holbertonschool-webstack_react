@@ -9,7 +9,7 @@ const Counter = React.createClass({
     return(
       <div>
         Current counter value: {count}
-        <div><button onClick={(e) => increment()}.Increment</button><div>
+        <div><button onClick={(e) => increment()}>Increment</button><div>
       </div>
     );
   }
@@ -22,7 +22,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionsCreators(actions, dispatch)
+  return bindActionsCreators(dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);

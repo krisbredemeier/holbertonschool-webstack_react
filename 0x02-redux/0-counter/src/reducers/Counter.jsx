@@ -1,10 +1,9 @@
 
-const Increment = 'INCREMENT';
 
 export default function CounterApp(state = 0, action) {
   switch(action.type) {
-    case types.INCREMENT:
-      return state = state + 1;
+    case "INCREMENT":
+      return state + 1;
   }
   return state;
 }

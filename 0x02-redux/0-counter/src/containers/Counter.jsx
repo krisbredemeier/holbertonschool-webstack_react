@@ -14,15 +14,16 @@ const Counter = React.createClass({
     );
   }
 });
+//
+// function mapStateToProps(state) {
+//   return {
+//     count: state
+//   };
+// }
+//
+// function mapDispatchToProps(dispatch) {
+//   return bindActionsCreators(dispatch)
+// }
 
-function mapStateToProps(state) {
-  return {
-    count: state
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionsCreators(dispatch)
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+// export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default Counter;

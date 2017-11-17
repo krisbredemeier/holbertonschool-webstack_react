@@ -1,7 +1,7 @@
 
 const Increment = 'INCREMENT';
 
-function CounterApp(state = 0, action) {
+export default function CounterApp(state = 0, action) {
   switch(action.type) {
     case types.INCREMENT:
       return state = state + 1;
@@ -9,4 +9,5 @@ function CounterApp(state = 0, action) {
   return state;
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+// export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default Counter;

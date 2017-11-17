@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionsCreators } from 'redux';
 
-const Counter = React.createClass({
+const Counter = () => ({
   displayName: 'Counter',
   render () {
     const { increment, count } = this.props;

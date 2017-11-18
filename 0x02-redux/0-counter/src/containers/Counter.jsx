@@ -17,7 +17,7 @@ const Counter = () => ({
 
 function mapStateToProps(state) {
   return {
-    count: state
+    count: state.counter
   };
 }
 
@@ -25,4 +25,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionsCreators(dispatch)
 }
 
-default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);

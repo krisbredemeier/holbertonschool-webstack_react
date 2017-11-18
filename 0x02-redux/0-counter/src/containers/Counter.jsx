@@ -25,4 +25,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionsCreators(dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+default connect(mapStateToProps, mapDispatchToProps)(Counter);

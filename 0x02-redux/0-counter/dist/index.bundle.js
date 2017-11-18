@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "dd951ef51effb4f42fab"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e76dfd1cdcc4d9c05433"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -25102,22 +25102,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = CounterApp;
-
-var Increment = 'INCREMENT';
-
 function CounterApp() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
   var action = arguments[1];
 
   switch (action.type) {
-    case types.INCREMENT:
-      return state = state + 1;
+    case "INCREMENT":
+      return state + 1;
   }
   return state;
 }
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Counter);
-// export default Counter;
+// default connect(mapStateToProps, mapDispatchToProps)(Counter);
 
 /***/ }),
 /* 226 */
@@ -25173,7 +25169,7 @@ exports.default = App;
 /* 227 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token (29:0)\n\n\u001b[0m \u001b[90m 27 | \u001b[39m\n \u001b[90m 28 | \u001b[39m\u001b[90m// export default connect(mapStateToProps, mapDispatchToProps)(Counter);\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[33mCounter\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 30 | \u001b[39m\u001b[0m\n");
+throw new Error("Module build failed: SyntaxError: Unexpected token (19:2)\n\n\u001b[0m \u001b[90m 17 | \u001b[39m\n \u001b[90m 18 | \u001b[39m\u001b[36mfunction\u001b[39m mapStateToProps(state) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 | \u001b[39m  \u001b[36mreturn\u001b[39m {\n \u001b[90m    | \u001b[39m  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 | \u001b[39m    count\u001b[33m:\u001b[39m state\n \u001b[90m 21 | \u001b[39m  }\u001b[33m;\u001b[39m\n \u001b[90m 22 | \u001b[39m}\u001b[0m\n");
 
 /***/ })
 /******/ ]);

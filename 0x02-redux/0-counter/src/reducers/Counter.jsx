@@ -9,4 +9,3 @@ export default function CounterApp(state = 0, action) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
-// export default Counter;

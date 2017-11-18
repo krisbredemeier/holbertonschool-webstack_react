@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e76dfd1cdcc4d9c05433"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2015fb74fac83f8366b3"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -25113,8 +25113,6 @@ function CounterApp() {
   return state;
 }
 
-// default connect(mapStateToProps, mapDispatchToProps)(Counter);
-
 /***/ }),
 /* 226 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -25169,7 +25167,7 @@ exports.default = App;
 /* 227 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token (19:2)\n\n\u001b[0m \u001b[90m 17 | \u001b[39m\n \u001b[90m 18 | \u001b[39m\u001b[36mfunction\u001b[39m mapStateToProps(state) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 | \u001b[39m  \u001b[36mreturn\u001b[39m {\n \u001b[90m    | \u001b[39m  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 | \u001b[39m    count\u001b[33m:\u001b[39m state\n \u001b[90m 21 | \u001b[39m  }\u001b[33m;\u001b[39m\n \u001b[90m 22 | \u001b[39m}\u001b[0m\n");
+throw new Error("Module build failed: SyntaxError: Unexpected token, expected ; (6:24)\n\n\u001b[0m \u001b[90m 4 | \u001b[39m\n \u001b[90m 5 | \u001b[39m\u001b[36mclass\u001b[39m \u001b[33mCounter\u001b[39m \u001b[36mextends\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39m\u001b[33mComponent\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m  displayName\u001b[33m:\u001b[39m \u001b[32m'Counter'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m   | \u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 | \u001b[39m  render () {\n \u001b[90m 8 | \u001b[39m    \u001b[36mconst\u001b[39m { increment\u001b[33m,\u001b[39m count } \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mprops\u001b[33m;\u001b[39m\n \u001b[90m 9 | \u001b[39m    \u001b[36mreturn\u001b[39m(\u001b[0m\n");
 
 /***/ })
 /******/ ]);

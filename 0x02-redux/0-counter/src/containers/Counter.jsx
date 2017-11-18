@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionsCreators } from 'redux';
 
-const Counter = () => ({
+class Counter extends React.Component{
   displayName: 'Counter',
   render () {
     const { increment, count } = this.props;
@@ -22,7 +22,10 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionsCreators(dispatch)
+  return bindActionsCreators({
+    increment: increment
+  },
+    dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

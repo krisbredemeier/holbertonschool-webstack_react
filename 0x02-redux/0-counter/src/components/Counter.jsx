@@ -7,11 +7,17 @@ export default class Counter extends React.Component {
     return (
       <div>
         {this.prop.value}
-        <button onClick={this.onClick.bind(this)}>New value</button>
+        <button onClick={()=>this.props.increment()}>New value</button>
       </div>
     );
   }
 }
+
+export functino increment(){
+  return {
+    type: 'INCREMENT',
+  }
+};
 
 Counter.defaultProps = {
   value: 0

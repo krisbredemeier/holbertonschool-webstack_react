@@ -13,7 +13,7 @@ export default class Counter extends React.Component {
   }
 }
 
-export functino increment(){
+export function increment(){
   return {
     type: 'INCREMENT',
   }

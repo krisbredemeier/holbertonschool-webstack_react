@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionsCreators } from 'redux';
+import { bindActionCreators } from 'redux';
 
 class CounterContainer extends React.Component{
   displayName: 'Counter'
@@ -26,7 +26,7 @@ export function increment() {
 
 function mapStateToProps(state) {
   return {
-    count: state.counter
+    count: state
   };
 }
 

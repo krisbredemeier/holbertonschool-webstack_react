@@ -10,10 +10,25 @@ class CounterContainer extends React.Component{
       <div>
         Current counter value: {count}
         <div><button onClick={(e) => increment()}>Increment</button></div>
+        <div><button onClick={(e) => decrement()}>Decrement</button></div>
       </div>
     );
   }
 };
+
+//actions
+
+export function increment() {
+  return {
+    type: "INCREMENT"
+  }
+}
+
+export function decrement() {
+  return {
+    type: "DECREMENT"
+  }
+}
 
 function mapStateToProps(state) {
   return {

@@ -15,6 +15,15 @@ class CounterContainer extends React.Component{
   }
 };
 
+//actions
+
+export function increment() {
+  return {
+    type: "INCREMENT"
+  }
+}
+
+
 function mapStateToProps(state) {
   return {
     count: state.counter

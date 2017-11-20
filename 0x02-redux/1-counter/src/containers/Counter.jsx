@@ -5,7 +5,7 @@ import { bindActionsCreators } from 'redux';
 class CounterContainer extends React.Component{
   displayName: 'Counter'
   render () {
-    const { increment, count } = this.props;
+    const { increment, decrement, count } = this.props;
     return(
       <div>
         Current counter value: {count}

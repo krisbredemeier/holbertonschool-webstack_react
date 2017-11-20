@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "97cd5b4ae4c2df578c65"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3450693e7806a858e59b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -25167,7 +25167,7 @@ exports.default = App;
 /* 227 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token (19:2)\n\n\u001b[0m \u001b[90m 17 | \u001b[39m\n \u001b[90m 18 | \u001b[39m\u001b[36mfunction\u001b[39m mapStateToProps(state) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 | \u001b[39m  \u001b[36mreturn\u001b[39m {\n \u001b[90m    | \u001b[39m  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 | \u001b[39m    count\u001b[33m:\u001b[39m state\u001b[33m.\u001b[39mcounter\n \u001b[90m 21 | \u001b[39m  }\u001b[33m;\u001b[39m\n \u001b[90m 22 | \u001b[39m}\u001b[0m\n");
+throw new Error("Module build failed: SyntaxError: Unexpected token (19:2)\n\n\u001b[0m \u001b[90m 17 | \u001b[39m\n \u001b[90m 18 | \u001b[39m\u001b[36mfunction\u001b[39m mapStateToProps(state) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 | \u001b[39m  \u001b[36mreturn\u001b[39m {\n \u001b[90m    | \u001b[39m  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 | \u001b[39m    counter\u001b[33m:\u001b[39m state\u001b[33m.\u001b[39mcounter\n \u001b[90m 21 | \u001b[39m  }\u001b[33m;\u001b[39m\n \u001b[90m 22 | \u001b[39m}\u001b[0m\n");
 
 /***/ })
 /******/ ]);

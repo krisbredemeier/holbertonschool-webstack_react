@@ -9,11 +9,11 @@ class Counter extends React.Component{
     return(
       <div>
         Current counter value: {count}
-        <div><button onClick={(e) => increment()}>Increment</button><div>
+        <div><button onClick={(e) => increment()}>Increment</button></div>
       </div>
     );
   }
-});
+};
 
 function mapStateToProps(state) {
   return {

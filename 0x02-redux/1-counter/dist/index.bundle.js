@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a9075a23ef2ee226065b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5c516e59724f5c165933"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -25101,17 +25101,19 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = CounterApp;
-function CounterApp() {
+
+exports.default = function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
   var action = arguments[1];
 
   switch (action.type) {
     case "INCREMENT":
       return state + 1;
+    case "Decrement":
+      return state - 1;
   }
   return state;
-}
+};
 
 /***/ }),
 /* 226 */
@@ -25176,6 +25178,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+exports.increment = increment;
+exports.decrement = decrement;
+
 var _react = __webpack_require__(20);
 
 var _react2 = _interopRequireDefault(_react);
@@ -25192,20 +25197,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Counter = function (_React$Component) {
-  _inherits(Counter, _React$Component);
+var CounterContainer = function (_React$Component) {
+  _inherits(CounterContainer, _React$Component);
 
-  function Counter() {
-    _classCallCheck(this, Counter);
+  function CounterContainer() {
+    _classCallCheck(this, CounterContainer);
 
-    return _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (CounterContainer.__proto__ || Object.getPrototypeOf(CounterContainer)).apply(this, arguments));
   }
 
-  _createClass(Counter, [{
+  _createClass(CounterContainer, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
           increment = _props.increment,
+          decrement = _props.decrement,
           count = _props.count;
 
       return _react2.default.createElement(
@@ -25223,29 +25229,54 @@ var Counter = function (_React$Component) {
               } },
             'Increment'
           )
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'button',
+            { onClick: function onClick(e) {
+                return decrement();
+              } },
+            'Decrement'
+          )
         )
       );
     }
   }]);
 
-  return Counter;
+  return CounterContainer;
 }(_react2.default.Component);
 
 ;
 
+//actions
+
+function increment() {
+  return {
+    type: "INCREMENT"
+  };
+}
+
+function decrement() {
+  return {
+    type: "DECREMENT"
+  };
+}
+
 function mapStateToProps(state) {
   return {
-    count: state.counter
+    count: state
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return (0, _redux.bindActionsCreators)({
+  return (0, _redux.bindActionCreators)({
     increment: increment
   }, dispatch);
 }
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Counter);
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(CounterContainer);
 
 /***/ })
 /******/ ]);

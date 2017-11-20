@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionsCreators } from 'redux';
+import { bindActionCreators } from 'redux';
 
 class CounterContainer extends React.Component{
   displayName: 'Counter'
@@ -32,12 +32,12 @@ export function decrement() {
 
 function mapStateToProps(state) {
   return {
-    count: state.counter
+    count: state
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionsCreators({
+  return bindActionCreators({
     increment: increment
   },
     dispatch);

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionsCreators } from 'redux';
 
 class Counter extends React.Component{
-  displayName: 'Counter',
+  displayName: 'Counter'
   render () {
     const { increment, count } = this.props;
     return(

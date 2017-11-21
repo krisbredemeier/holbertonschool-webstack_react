@@ -10,8 +10,8 @@ class CounterContainer extends React.Component{
     return(
       <div>
         Current counter value: {count}
-        <div><Button text="Increment" fct={()=>this.props.increment()} />
-        <div><Button text="Decrement" fct={()=>this.props.decrement()} />
+        <Button text="Increment" fct={()=>this.props.increment()} />
+        <Button text="Decrement" fct={()=>this.props.decrement()} />
       </div>
     );
   }

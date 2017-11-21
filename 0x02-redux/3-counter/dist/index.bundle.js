@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "bf73cafff04619a91ada"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6ad1f59d1e02b02aab19"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -25225,12 +25225,6 @@ var CounterContainer = function (_React$Component) {
         null,
         'Current counter value: ',
         count,
-        '// ',
-        _react2.default.createElement(
-          'div',
-          null,
-          this.props.counter
-        ),
         _react2.default.createElement(_Button2.default, { text: 'Increment', fct: function fct() {
             return _this2.props.increment();
           } }),

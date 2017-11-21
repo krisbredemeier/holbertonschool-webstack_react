@@ -9,13 +9,13 @@ export default class Result extends React.Component {
         {this.prop.value}
       </div>
     );
-  }
+    }
   }
 
 Result.defaultProps = {
   value: 0
-  };
+};
 
 Result.propTypes = {
   value: PropTypes.number.isRequired
-  };
+};

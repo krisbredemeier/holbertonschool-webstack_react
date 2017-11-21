@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export defualt class Result extends React.Component {
+export default class Result extends React.Component {
 
   render() {
     return (

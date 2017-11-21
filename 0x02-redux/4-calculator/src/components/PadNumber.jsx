@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export defualt class PadNumber extends React.Component {
+export default class PadNumber extends React.Component {
 
   render() {
     return (

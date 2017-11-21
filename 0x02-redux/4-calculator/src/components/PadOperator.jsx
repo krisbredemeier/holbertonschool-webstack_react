@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export defualt class PadOperator extends React.Component {
+export default class PadOperator extends React.Component {
 
   render() {
     return (

@@ -12,11 +12,11 @@ export default class PadNumber extends React.Component {
   }
 }
 
-PadNumber.defaultProps = {
-  value: 0
-};
+// PadNumber.defaultProps = {
+//   value: 0
+// };
 
 PadNumber.propTypes = {
   value: PropTypes.number.isRequired
-  fct: PropTyps.func
+  // fct: PropTyps.func
 };

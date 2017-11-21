@@ -17,6 +17,6 @@ export default class PadOperator extends React.Component {
 // };
 
 PadOperator.propTypes = {
-  value: PropTypes.number.isRequired
+  value: PropTypes.string.isRequired
   // fct: PropTypes.func
 };

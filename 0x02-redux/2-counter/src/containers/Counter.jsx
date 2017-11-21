@@ -9,9 +9,7 @@ class CounterContainer extends React.Component{
     const { increment, decrement, count } = this.props;
     return(
       <div>
-        Current counter value: {count}
-        <Button text="Increment" fct={()=>this.props.increment()} />
-        <Button text="Decrement" fct={()=>this.props.decrement()} />
+        <div>{this.props.counter}</div>
       </div>
     );
   }
@@ -37,12 +35,4 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({
-    increment: increment,
-    decrement: decrement
-  },
-    dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CounterContainer);
+export default connect(mapStateToProps)(CounterContainer);

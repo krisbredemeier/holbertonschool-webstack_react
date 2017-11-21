@@ -1,3 +1,14 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+
+class Button extends React.Component {
+  displayName: 'Button'
+  render () {
+    return(
+      <div>
+        <div><button onClick={(e) => this.props.fct()}>{this.props.text}</button></div>
+      </div>
+    );
+  }
+};
+
+export default Button;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Button from './Button.jsx';
 
 class CounterContainer extends React.Component{
   displayName: 'Counter'
@@ -9,8 +10,8 @@ class CounterContainer extends React.Component{
     return(
       <div>
         Current counter value: {count}
-        <div><button onClick={(e) => increment()}>Increment</button></div>
-        <div><button onClick={(e) => decrement()}>Decrement</button></div>
+        <div><Button text="Increment" fct={()=>this.props.increment()} />
+        <div><Button text="Decrement" fct={()=>this.props.decrement()} />
       </div>
     );
   }

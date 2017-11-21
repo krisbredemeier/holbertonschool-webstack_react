@@ -1,2 +1,2 @@
 import React from 'react';
-import Result from './Result.jsx';
+import PropTypes from 'prop-types';

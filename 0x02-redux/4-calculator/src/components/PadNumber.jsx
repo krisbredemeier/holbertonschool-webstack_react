@@ -12,6 +12,8 @@ export default class PadNumber extends React.Component {
   }
 }
 
+//default PropTyps
+
 PadNumber.defaultProps = {
   value: 0
 };

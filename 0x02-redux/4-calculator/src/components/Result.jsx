@@ -11,6 +11,7 @@ export default class Result extends React.Component {
     );
     }
   }
+//default PropTyps
 
 Result.defaultProps = {
   value: 0

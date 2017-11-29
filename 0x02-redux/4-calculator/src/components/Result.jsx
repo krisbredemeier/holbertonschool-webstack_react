@@ -6,7 +6,7 @@ export default class Result extends React.Component {
   render() {
     return (
       <div className="result">
-        {this.prop.value}
+        {this.props.value}
       </div>
     );
     }

@@ -6,7 +6,7 @@ export default class PadOperator extends React.Component {
   render() {
     return (
       <div className="pad operator">
-        {this.prop.value}
+        {this.props.value}
       </div>
     );
   }

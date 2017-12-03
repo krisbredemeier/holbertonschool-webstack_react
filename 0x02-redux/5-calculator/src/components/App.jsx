@@ -2,6 +2,8 @@ import React from 'react';
 import Result from './Result.jsx';
 import PadNumber from './PadNumber.jsx';
 import PadOperator from './PadOperator.jsx';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 export default class App extends React.Component {
   render() {
@@ -36,5 +38,11 @@ export default class App extends React.Component {
         </div>
       </div>
      );
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    number: state.number.values
   }
 }

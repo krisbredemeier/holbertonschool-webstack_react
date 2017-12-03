@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-export default class PadNumber extends React.Component {
+class PadNumber extends React.Component {
 
   render() {
     return (
@@ -28,7 +28,7 @@ PadNumber.defaultProps = {
 
 PadNumber.propTypes = {
   value: PropTypes.number.isRequired
-  fct: PropTyps.func
+  // fct: PropTyps.func
 };
 
 export default connect(null, mapDispatchToProps)(PadNumber);

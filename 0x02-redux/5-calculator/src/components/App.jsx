@@ -5,7 +5,7 @@ import PadOperator from './PadOperator.jsx';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -47,4 +47,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect (mapStateToProps)(App);
+export default connect(mapStateToProps)(App);

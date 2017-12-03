@@ -22,5 +22,5 @@ PadOperator.defaultProps = {
 
 PadOperator.propTypes = {
   value: PropTypes.string.isRequired
-  fct: PropTypes.func
+  // fct: PropTypes.func
 };

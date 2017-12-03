@@ -7,11 +7,17 @@ export default class PadNumber extends React.Component {
 
   render() {
     return (
-      <div className="pad">
+      <div className="pad" onClick={()=>this.props.update(this.props.value)}>
         {this.props.value}
       </div>
     );
   }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators ({
+    update,
+  }, dispatch);
 }
 
 //default PropTyps
@@ -22,5 +28,7 @@ PadNumber.defaultProps = {
 
 PadNumber.propTypes = {
   value: PropTypes.number.isRequired
-  // fct: PropTyps.func
+  fct: PropTyps.func
 };
+
+export default connect(null, mapDispatchToProps)(PadNumber);

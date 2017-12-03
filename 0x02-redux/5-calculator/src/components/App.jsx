@@ -46,3 +46,5 @@ function mapStateToProps(state) {
     number: state.number.values
   }
 }
+
+export default connect (mapStateToProps)(App);

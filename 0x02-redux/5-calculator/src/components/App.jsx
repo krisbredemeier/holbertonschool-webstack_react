@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="row">
-          <Result value={0} />
+          <Result value={this.props.number} />
         </div>
         <div className="row">
           <PadNumber value={7} />

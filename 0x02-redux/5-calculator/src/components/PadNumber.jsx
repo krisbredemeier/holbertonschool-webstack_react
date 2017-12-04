@@ -20,6 +20,13 @@ function mapDispatchToProps(dispatch) {
   }, dispatch);
 }
 
+export function update(number) {
+  return {
+    type: 'UPDATE',
+    number
+  }
+}
+
 //default PropTyps
 
 PadNumber.defaultProps = {

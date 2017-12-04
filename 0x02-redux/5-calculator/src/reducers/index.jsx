@@ -1,6 +1,8 @@
 
-
-export default function(state = 0, action) {
+const initalState = {
+  values: 0
+}
+export default function(state = initalState, action) {
   switch(action.type) {
     case "UPDATE":
       return {

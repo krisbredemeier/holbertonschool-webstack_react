@@ -10,9 +10,9 @@ const Header = () => (
         <li><Link to="/school">School</Link></li>
       </ul>
       <switch>
-	<Route exact path="/" component={ Home }/>
-	<Routh path="/holberton" compoent={ Holberton }/>
-	<Routh path="/school" compoent={ School }/>
+      	<Route exact path="/" component={Home}/>
+      	<Routh path="/holberton" compoent={Holberton}/>
+      	<Routh path="/school" compoent={School}/>
       </switch>
     </div>
   </Router>

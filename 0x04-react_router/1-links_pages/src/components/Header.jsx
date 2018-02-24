@@ -1,5 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import Home from './Home.jsx';
+import Holberton from './Holberton.jsx';
+import School from './School.jsx';
 
 const Header = () => (
   <Router>

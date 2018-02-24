@@ -14,8 +14,8 @@ const Header = () => (
       </ul>
       <switch>
       	<Route exact path="/" component={Home}/>
-      	<Route path="/holberton" compoent={Holberton}/>
-      	<Route path="/school" compoent={School}/>
+      	<Route path="/holberton" component={Holberton}/>
+      	<Route path="/school" component={School}/>
       </switch>
     </div>
   </Router>

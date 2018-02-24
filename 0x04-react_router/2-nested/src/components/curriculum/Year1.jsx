@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Year1 = () => (
-    <div>  </div>
+    <div> Year1 curriculum </div>
 )
 
 export default Year2;

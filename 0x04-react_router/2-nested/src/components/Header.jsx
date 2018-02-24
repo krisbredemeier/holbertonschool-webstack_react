@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Home from './Home.jsx';
 import Holberton from './Holberton.jsx';
 import School from './School.jsx';
+import Curriculum from './Curriculum.jsx';
 
 const Header = () => (
   <Router>

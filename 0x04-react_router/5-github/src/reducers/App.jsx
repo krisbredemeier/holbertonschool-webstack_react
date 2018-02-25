@@ -6,12 +6,12 @@ export default function(state={}, action) {
       }
       case "RECIEVED_REPOS":
         return {
-          fetching: action.fetching
+          fetching: action.fetching,
           repos: [action.repos]
         }
       case "RECIEVE_COMMITS":
         return {
-          fetching: action.fetching
+          fetching: action.fetching,
           commits: [action.commits]
         }
   default:

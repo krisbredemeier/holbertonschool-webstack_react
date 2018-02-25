@@ -4,4 +4,4 @@ const Year1 = () => (
     <div> Year1 curriculum </div>
 )
 
-export default Year2;
+export default Year1;

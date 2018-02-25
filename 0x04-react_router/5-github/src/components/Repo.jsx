@@ -5,12 +5,14 @@ import Loader from './Loader.jsx';
 import { fetchCommits } from '../actions/Actions.jsx';
 
 class Repo extends React.Component {
+  // render loader image
   render() {
     if(this.props.fetching) {
       return (
         <Loader/>
       )
     }
+    // render commits based on repo
     else {
       return (
         <div>

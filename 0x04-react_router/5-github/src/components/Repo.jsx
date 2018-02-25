@@ -12,12 +12,13 @@ class Repo extends React.Component {
         <Loader/>
       )
     }
-    // render commits based on repo
+    // if commits are empty, dispaly 'nothing'
     else if(!this.props.commits) {
       reurn (
         <h1>Nothing</h1>
       )
     }
+    // render commits by indix based on repo
     else {
       return (
         <div>

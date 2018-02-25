@@ -9,7 +9,7 @@ class Year extends React.Component {
     let curriculum_id = this.props.match.params.year_id;
     let the_curriculum = this.props.curriculum.filter(function(current_curriculum) {
       return current_curriculum.id === curriculum_id;
-    })
+    })[0]
     return (
       <div>
         <h2>{the_curriculum.name}</h2>
@@ -20,7 +20,7 @@ class Year extends React.Component {
 }
 
 function mapStateToProps(state) {
-  return { curriculum: state.curriculum };
+  return { curriculum: state.curriculum[0] };
 }
 
 export default withRouter(connect(mapStateToProps)(Year));

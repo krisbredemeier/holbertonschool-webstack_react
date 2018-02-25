@@ -7,13 +7,13 @@ import { withRouter } from 'react-router'
 class Year extends React.Component {
   render() {
     let curriculum_id = this.props.match.params.year_id;
-    let curriculum = this.props.curriculum.filter(function(c) {
+    let the_curriculum = this.props.curriculum.filter(function(c) {
       return c.id === curriculum_id;
     })
     return (
       <div>
-        <h2>{curriculum.name}</h2>
-        <h3>{curriculum.description}</h3>
+        <h2>{the_curriculum.name}</h2>
+        <h3>{the_curriculum.description}</h3>
       </div>
     )
   }
@@ -21,7 +21,7 @@ class Year extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    curriculum: state.curriculum[0]
+    curriculum: state.curriculum
   }
 }
 

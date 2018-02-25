@@ -24,7 +24,7 @@ class Curriculum extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    curriculum: state.curriculum[0]
+    curriculum: state.curriculum
   }
 }
 export default connect(mapStateToProps)(Curriculum);

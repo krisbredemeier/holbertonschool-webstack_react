@@ -6,6 +6,7 @@ import thunkMiddleware from 'redux-thunk'
 import { Provider } from 'react-redux';
 import App from './components/App.jsx';
 import AppReducer from './reducers/App.jsx';
+import { fetchRepos } from './actions/Actions.jsx';
 
 let store = createStore(
   AppReducer,
@@ -14,28 +15,7 @@ let store = createStore(
   )
 )
 
-store.dispatch(function(dispatch) {
-  dispatch({
-    type: 'INIT_CURRICULUM',
-    curriculum: [
-      {
-        id: "year_1",
-        name: "Year 1",
-        description: "C, Python and Sys admin"
-      },
-      {
-        id: "year_2_webstack",
-        name: "Year 2 Webstack",
-        description: "Caching, RESTAPI and React"
-      },
-      {
-        id: "year_2_low_level",
-        name: "Year 2 Low level",
-        description: "C, ASM and Algorithms"
-      }
-    ]
-  });
-});
+store.dispatch(fetchRepos());
 
 ReactDOM.render(
   <Provider store={store}>

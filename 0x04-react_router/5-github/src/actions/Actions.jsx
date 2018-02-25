@@ -22,8 +22,6 @@ function rfetchCommits(repos, json) {
   return {
     type: FETCHING,
     fetching: true
-    posts: json.data.children.map(child => child.data),
-    receivedAt: Date.now()
   }
 }
 
@@ -44,7 +42,7 @@ export function fetchRepos(repos) {
         response => response.json(),
         error => console.log('An error occurred.', error)
      )
-     .then(json =>
+     .then(repos =>
        dispatch(recieveRepos(repos, json))
      )
  }
@@ -58,7 +56,7 @@ export function fetchCommits(repo) {
         response => response.json(),
         error => console.log('An error occurred.', error)
      )
-     .then(json =>
+     .then(commits =>
        dispatch(recieveCommits())
      )
  }

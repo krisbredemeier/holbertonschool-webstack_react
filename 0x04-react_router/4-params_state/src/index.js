@@ -44,4 +44,4 @@ ReactDOM.render(
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')
-)nder(<App />, document.getElementById('root'))
+)

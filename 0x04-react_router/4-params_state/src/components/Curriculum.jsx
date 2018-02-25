@@ -2,16 +2,29 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import Year from './Year.jsx';
 import { connect } from 'react-redux';
-const Curriculum = ({ match }) => (
-  <div>
-    <ul>
-      <li><Link to="/curriculum/year_1">Year1</Link></li>
-      <li><Link to="/curriculum/year_2">Year2</Link></li>
-      <li><Link to="/curriculum/year_3">Year3</Link></li>
-      <li><Link to="/curriculum/year_4">Year4</Link></li>
-    </ul>
-      <Route path="/curriculum/:name" component={Year}/>
-  </div>
-)
 
-export default Curriculum;
+
+class Curriculum extends React.Component {
+  render() {
+    return (
+      <div>
+        <ul>
+          {this.props.curriculum.map(function(c,i) {
+            return (
+              <li key={i}><Link to={"/curriculum/" + c.id}>{c.name}</Link></li>
+            )
+          })}
+        </ul>
+
+        <Route path="/curriculum/:year_id" component={Year}/>
+      </div>
+    )
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    curriculum: state.curriculum[0]
+  }
+}
+export default connect(mapStateToProps)(Curriculum);

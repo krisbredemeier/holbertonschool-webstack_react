@@ -3,15 +3,15 @@ import { Link, Route } from 'react-router-dom';
 import Year from './Year.jsx';
 import { connect } from 'react-redux';
 
-
+// render the correct curriculum
 class Curriculum extends React.Component {
   render() {
     return (
       <div>
         <ul>
-          {this.props.curriculum.map(function(c,i) {
+          {this.props.curriculum.map(function(current_curriculum,i) {
             return (
-              <li key={i}><Link to={"/curriculum/" + c.id}>{c.name}</Link></li>
+              <li key={i}><Link to={"/curriculum/" + current_curriculum.id}>{current_curriculum.name}</Link></li>
             )
           })}
         </ul>

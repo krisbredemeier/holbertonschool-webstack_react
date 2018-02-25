@@ -7,8 +7,8 @@ import { withRouter } from 'react-router'
 class Year extends React.Component {
   render() {
     let curriculum_id = this.props.match.params.year_id;
-    let the_curriculum = this.props.curriculum.filter(function(c) {
-      return c.id === curriculum_id;
+    let the_curriculum = this.props.curriculum.filter(function(current_curriculum) {
+      return current_curriculum.id === curriculum_id;
     })
     return (
       <div>
@@ -20,9 +20,7 @@ class Year extends React.Component {
 }
 
 function mapStateToProps(state) {
-  return {
-    curriculum: state.curriculum
-  }
+  return { curriculum: state.curriculum };
 }
 
 export default withRouter(connect(mapStateToProps)(Year));

@@ -16,8 +16,8 @@ let store = createStore(
 
 store.dispatch(function(dispatch) {
   dispatch({
-    type: 'INIT_CURRICULUMS',
-    curriculums: [
+    type: 'INIT_CURRICULUM',
+    curriculum: [
       {
         id: "year_1",
         name: "Year 1",

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import Year from './Year.jsx';
-
+import { connect } from 'react-redux';
 const Curriculum = ({ match }) => (
   <div>
     <ul>

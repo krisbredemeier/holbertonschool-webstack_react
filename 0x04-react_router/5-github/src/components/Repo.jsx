@@ -13,6 +13,11 @@ class Repo extends React.Component {
       )
     }
     // render commits based on repo
+    else if(!this.props.commits) {
+      reurn (
+        <h1>Nothing</h1>
+      )
+    }
     else {
       return (
         <div>

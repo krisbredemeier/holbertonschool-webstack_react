@@ -7,13 +7,13 @@ export default function(state=initialState, action) {
   switch(action.type){
     case "FETCHING":
       return {
-        is_fetching: true,
-        status: "is_fetching"
+        is_fetching: action.is_fetching,
+        status: action.results
       }
-    case "RECEIVED":
+    case "RESET":
       return {
         is_fetching: false,
-        status: action.status
+        status: ""
       }
   default:
     return state;

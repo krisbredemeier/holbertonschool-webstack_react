@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Loader from './Loader.jsx';
 import Button from './Button.jsx';
 import Status from './Status.jsx';
+import fetch from 'cross-fetch';
 
 
 class AppComponent extends React.Component {
@@ -10,7 +11,7 @@ class AppComponent extends React.Component {
     return (
       <div>
         <Button text="Fetching..." fct={() => this.props.fetching()} />
-        <Button text="Received" fct={() => this.props.received("OK")} />
+        <Button text="Reset" fct={() => this.props.reset()} />
         <hr />
         <Loader is_loading={this.props.is_fetching} />
         <Status display={!this.props.is_fetching} value={this.props.status} />
@@ -30,13 +31,23 @@ const mapDispatchToProps = dispatch => {
   return {
     fetching: () => {
       dispatch({
-        type: 'FETCHING'
+        type: 'FETCHING',
+        is_fetching: true,
+        results: "",
+      })
+      fetch('http://0.0.0.0:5001/api/v1/status')
+        .then(resluts => {
+          dispatch({
+            type: 'FETCHING',
+            is_fetching: false,
+            resluts: resluts.statusText
+          })
       })
     },
-    received: (status) => {
+    reset: () => {
       dispatch({
-        type: 'RECEIVED',
-        status
+        type: 'RESET',
+
       })
     },
   }
